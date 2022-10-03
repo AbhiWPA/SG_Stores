@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="294.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SecurutyFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="146.0" layoutX="14.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="696.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ccccbe" />
+                  <Stop color="#ccccbe" offset="0.007662835249042145" />
+                  <Stop color="#dde165" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="146.0" layoutX="14.0" layoutY="148.0" stroke="BLACK" strokeType="INSIDE" width="696.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#d6dab9" />
+                  <Stop color="#d6dab9" offset="0.007662835249042145" />
+                  <Stop color="#e2e47c" offset="0.6819923371647509" />
+                  <Stop color="#e2e47c" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="28.0" layoutY="1.0" style="-fx-background-color: #ffffff;" text="Change Owner User Name &amp; Password">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="148.0" style="-fx-background-color: #ffffff;" text="Change Cashier User Name &amp; Password">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtOwnerName" alignment="CENTER_RIGHT" focusColor="BLACK" labelFloat="true" layoutX="325.0" layoutY="14.0" onKeyReleased="#Owner_Key_Released" prefHeight="33.0" prefWidth="233.0" promptText="New User Name" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCashierName" alignment="CENTER_RIGHT" focusColor="BLACK" labelFloat="true" layoutX="325.0" layoutY="160.0" onKeyReleased="#Cashier_key_Released" prefHeight="33.0" prefWidth="233.0" promptText="New Cahier Name" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnUpdateOwner" buttonType="RAISED" layoutX="644.0" layoutY="56.0" onAction="#btnUpdateOwnerOnAction" prefHeight="40.0" prefWidth="48.0" style="-fx-background-color: #ab1515;" text="." textFill="#ab1515">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="20" wrappingWidth="12.14285659790039" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdateCashier" buttonType="RAISED" layoutX="644.0" layoutY="202.0" onAction="#updateCashierOnAction" prefHeight="40.0" prefWidth="48.0" style="-fx-background-color: #ab1515;" text="." textFill="#ab1515">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="20" wrappingWidth="14.14285659790039" />
+         </graphic>
+      </JFXButton>
+      <JFXPasswordField fx:id="txtOwnerPassword" alignment="CENTER_RIGHT" focusColor="#0e1014" labelFloat="true" layoutX="325.0" layoutY="61.0" onKeyReleased="#Owner_Key_Released" prefHeight="33.0" prefWidth="233.0" promptText="New Password" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXTextField fx:id="txtCurrentUserName" alignment="CENTER_RIGHT" focusColor="BLACK" labelFloat="true" layoutX="25.0" layoutY="43.0" prefHeight="33.0" prefWidth="233.0" promptText="Current User Name" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtCurrentPassword" alignment="CENTER_RIGHT" focusColor="#0e1014" labelFloat="true" layoutX="25.0" layoutY="101.0" prefHeight="33.0" prefWidth="233.0" promptText="Current Password" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXTextField fx:id="txtCurrentCashierName" alignment="CENTER_RIGHT" focusColor="BLACK" labelFloat="true" layoutX="25.0" layoutY="189.0" prefHeight="33.0" prefWidth="233.0" promptText="Current Cahier Name" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtCurrentCashierPassword" alignment="CENTER_RIGHT" focusColor="#0e1014" labelFloat="true" layoutX="25.0" layoutY="241.0" prefHeight="33.0" prefWidth="233.0" promptText="Current Password" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXPasswordField>
+      <CheckBox fx:id="checkBox1" layoutX="590.0" layoutY="118.0" mnemonicParsing="false" onAction="#showOwnerPswdOnAction" text="Show Password">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="checkBox2" layoutX="590.0" layoutY="256.0" mnemonicParsing="false" onAction="#showCashierPasswordOnAction" text="Show Password">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <JFXPasswordField fx:id="txtCashierPswd" alignment="CENTER_RIGHT" focusColor="#0e1014" labelFloat="true" layoutX="325.0" layoutY="209.0" onKeyReleased="#Cashier_key_Released" prefHeight="33.0" prefWidth="233.0" promptText="New Password" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXPasswordField>
+      <Separator layoutX="314.0" layoutY="177.0" orientation="VERTICAL" prefHeight="103.0" prefWidth="8.0" />
+      <Separator layoutX="314.0" layoutY="33.0" orientation="VERTICAL" prefHeight="103.0" prefWidth="8.0" />
+      <JFXButton buttonType="RAISED" layoutX="274.0" layoutY="101.0" onAction="#ownerSearchBtnOnAction" prefHeight="33.0" prefWidth="35.0" style="-fx-background-color: #036408;" text="." textFill="#036408">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" wrappingWidth="5.142857551574707" />
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="274.0" layoutY="241.0" onAction="#cashierSearchBtnOnAction" prefHeight="33.0" prefWidth="35.0" style="-fx-background-color: #036408;" text="." textFill="#036408">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" wrappingWidth="5.142857551574707" />
+         </graphic>
+      </JFXButton>
+      <JFXPasswordField fx:id="txtConfirmOwnerPassword" alignment="CENTER_RIGHT" focusColor="#0e1014" labelFloat="true" layoutX="325.0" layoutY="107.0" onKeyReleased="#Owner_Password_Confirm" prefHeight="33.0" prefWidth="233.0" promptText="Confirm Password" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXPasswordField fx:id="txtConfirmCashierPassword" alignment="CENTER_RIGHT" focusColor="#0e1014" labelFloat="true" layoutX="325.0" layoutY="255.0" onKeyReleased="#Cashier_Password_Confirm" prefHeight="33.0" prefWidth="233.0" promptText="Confirm Password" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXTextField fx:id="txtTextOwnerPassword" alignment="CENTER_RIGHT" focusColor="BLACK" labelFloat="true" layoutX="325.0" layoutY="61.0" onKeyReleased="#Owner_Key_Released" prefHeight="33.0" prefWidth="233.0" promptText="New Password" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTextOwnerConfirmPswd" alignment="CENTER_RIGHT" focusColor="BLACK" labelFloat="true" layoutX="325.0" layoutY="107.0" onKeyReleased="#Owner_Key_Released" prefHeight="33.0" prefWidth="233.0" promptText="Confirm Password" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTextConfirmCashPswd" alignment="CENTER_RIGHT" focusColor="BLACK" labelFloat="true" layoutX="325.0" layoutY="255.0" onKeyReleased="#Cashier_key_Released" prefHeight="33.0" prefWidth="233.0" promptText="Confirm Password" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTextCashierPassword" alignment="CENTER_RIGHT" focusColor="BLACK" labelFloat="true" layoutX="325.0" layoutY="209.0" onKeyReleased="#Cashier_key_Released" prefHeight="33.0" prefWidth="233.0" promptText="New Password" style="-fx-border-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

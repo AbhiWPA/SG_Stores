@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="512.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f08b9" height="28.0" layoutX="208.0" stroke="#1f08b9" strokeType="INSIDE" width="772.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4605ff" height="28.0" smooth="false" stroke="#4605ff" strokeType="INSIDE" width="209.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5c47e4" height="82.0" layoutY="28.0" stroke="#5c47e4" strokeMiterLimit="0.0" strokeType="INSIDE" width="209.0" />
+      <Text fill="WHITE" layoutX="9.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S.G. VEGETABLES &amp; FRUITS SHOP">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Circle fill="WHITE" layoutX="103.0" layoutY="46.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+      <FontAwesomeIconView glyphName="USER" layoutX="90.0" layoutY="57.0" size="33" text="" />
+      <Text fill="#fcfcfc" layoutX="9.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label layoutX="61.0" layoutY="69.0" prefHeight="17.0" prefWidth="143.0" text="Owner" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Text fill="#fcfcfc" layoutX="9.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID       :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label layoutX="61.0" layoutY="90.0" prefHeight="17.0" prefWidth="143.0" text="U001" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fill="WHITE" glyphName="CARET_DOWN" layoutX="225.0" layoutY="24.0" onDragDetected="#tittleBarOnAction" size="30">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIconView>
+      <ImageView fitHeight="17.0" fitWidth="39.0" layoutX="281.0" layoutY="6.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/2bernx4.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" layoutX="425.0" layoutY="6.0" text="Sunday, January 25, 2022" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="866.0" layoutY="6.0" text="22:16:56 PM" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" fill="#0f508d" height="405.0" layoutX="-1.0" layoutY="110.0" stroke="BLACK" strokeType="INSIDE" width="209.0" />
+      <JFXButton fx:id="btnDashBoard" buttonType="RAISED" layoutX="-1.0" layoutY="114.0" onAction="#dashboardOnAction" prefHeight="38.0" prefWidth="209.0" ripplerFill="#b9b3b3" text="DASHBOARD" textFill="#e1e0e0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="DASHBOARD" size="23" wrappingWidth="31.0" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator layoutX="-1.0" layoutY="152.0" prefHeight="5.0" prefWidth="209.0" />
+      <JFXButton fx:id="btnSellings" buttonType="RAISED" layoutX="-2.0" layoutY="156.0" onAction="#sellingsBtnOnAction" prefHeight="36.0" prefWidth="209.0" ripplerFill="#b9b3b3" text="SELLINGS" textFill="#f2f2f2" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="25" wrappingWidth="57.142864525318146" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnVegetables" buttonType="RAISED" layoutX="-1.0" layoutY="192.0" onAction="#vegetableBtnOnAction" prefHeight="36.0" prefWidth="209.0" ripplerFill="#b9b3b3" text="VEGETABLES" textFill="#f2f2f2" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CIRCLE" size="25" wrappingWidth="42.142864525318146" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnFruits" buttonType="RAISED" layoutX="-1.0" layoutY="228.0" onAction="#fruitsBtnOnAction" prefHeight="36.0" prefWidth="209.0" ripplerFill="#b9b3b3" text="FRUITS" textFill="#f2f2f2" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="25" wrappingWidth="81.14286452531815" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Line endX="100.0" fill="#cdcdcd" layoutX="107.0" layoutY="192.0" scaleY="0.3" smooth="false" startX="-107.0" startY="1.52587890625E-5" stroke="WHITE" />
+      <Line endX="100.0" fill="#cdcdcd" layoutX="105.0" layoutY="228.0" scaleY="0.3" startX="-107.0" startY="1.52587890625E-5" stroke="WHITE" />
+      <JFXButton fx:id="btnCustomers" buttonType="RAISED" layoutX="-1.0" layoutY="264.0" onAction="#customersBtnOnAction" prefHeight="36.0" prefWidth="209.0" ripplerFill="#b9b3b3" text="CUSTOMERS" textFill="#f2f2f2" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="MALE" size="25" wrappingWidth="43.142864525318146" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Line endX="100.0" fill="#cdcdcd" layoutX="108.0" layoutY="264.0" scaleY="0.3" startX="-107.0" startY="1.52587890625E-5" stroke="WHITE" />
+      <JFXButton fx:id="btnEmployees" buttonType="RAISED" layoutX="-2.0" layoutY="337.0" onAction="#employeesBtnOnAction" prefHeight="36.0" prefWidth="209.0" ripplerFill="#b9b3b3" text="EMPLOYEES" textFill="#f2f2f2" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="GROUP" size="25" wrappingWidth="51.142864525318146" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Line endX="100.0" fill="#cdcdcd" layoutX="105.0" layoutY="337.0" scaleY="0.3" startX="-107.0" startY="1.52587890625E-5" stroke="WHITE" />
+      <JFXButton fx:id="btnOrders" buttonType="RAISED" layoutX="-2.0" layoutY="301.0" onAction="#orderBtnOnAction" prefHeight="36.0" prefWidth="209.0" ripplerFill="#b9b3b3" text="ORDER" textFill="#f2f2f2" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="EXCHANGE" size="25" wrappingWidth="81.14286452531815" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnVehicles" buttonType="RAISED" layoutX="-2.0" layoutY="372.0" onAction="#vehiclesBtnOnAction" prefHeight="36.0" prefWidth="209.0" ripplerFill="#b9b3b3" text="VEHICLES" textFill="#f2f2f2" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRUCK" size="25" wrappingWidth="64.14286452531815" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Line endX="100.0" fill="#cdcdcd" layoutX="108.0" layoutY="408.0" scaleY="0.3" startX="-107.0" startY="1.52587890625E-5" stroke="WHITE" />
+      <JFXButton fx:id="btnBranches" buttonType="RAISED" layoutY="408.0" onAction="#branchesBtnOnAction" prefHeight="36.0" prefWidth="209.0" ripplerFill="#b9b3b3" text="BRANCHES" textFill="#f2f2f2" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="BUILDING" size="25" wrappingWidth="53.142864525318146" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Line endX="100.0" fill="#cdcdcd" layoutX="105.0" layoutY="444.0" scaleY="0.3" startX="-107.0" startY="1.52587890625E-5" stroke="WHITE" />
+      <JFXButton fx:id="btnSettings" buttonType="RAISED" layoutY="479.0" onAction="#settingsBtnOnAction" prefHeight="36.0" prefWidth="209.0" ripplerFill="#b9b3b3" text="Reports &amp; Others" textFill="#f2f2f2" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="COG" size="25" wrappingWidth="20.142864525318146" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane fx:id="context" layoutX="208.0" layoutY="110.0" prefHeight="405.0" prefWidth="768.0">
+         <children>
+            <ImageView fitHeight="404.0" fitWidth="768.0" layoutX="1.0" layoutY="2.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../assets/background.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="117.0" layoutX="615.0" layoutY="46.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../assets/Vege-Icon.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="69.0" fitWidth="102.0" layoutX="376.0" layoutY="39.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../assets/Fruit-Ico.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="89.0" layoutX="137.0" layoutY="45.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../assets/Emp-Ico.jpg" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#105da1d2" height="93.0" layoutX="22.0" layoutY="14.0" opacity="0.43" stroke="BLACK" strokeType="INSIDE" width="208.0" />
+            <Text layoutX="49.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Employees">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ef52ccb" height="93.0" layoutX="273.0" layoutY="15.0" opacity="0.43" stroke="BLACK" strokeType="INSIDE" width="208.0" />
+            <Text layoutX="305.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Fruits">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bc6de3b6" height="93.0" layoutX="525.0" layoutY="15.0" opacity="0.32" stroke="BLACK" strokeType="INSIDE" width="208.0" />
+            <Text layoutX="530.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Vegetables" wrappingWidth="197.9999942779541">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblTotalEmps" layoutX="58.0" layoutY="57.0" text="10">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalVegetables" layoutX="557.0" layoutY="57.0" text="10">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalFruits" layoutX="315.0" layoutY="54.0" text="10">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <LineChart layoutX="23.0" layoutY="134.0" prefHeight="257.0" prefWidth="565.0">
+               <xAxis>
+                  <CategoryAxis animated="false" autoRanging="false" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis label="Persentage(%)" side="LEFT" upperBound="90.0" />
+               </yAxis>
+            </LineChart>
+            <Line endX="-42.0" endY="-43.71429443359375" layoutX="192.0" layoutY="299.0" startX="-104.0" startY="-10.71429443359375" stroke="#9702e7" />
+            <Line endX="-37.0" endY="-21.71429443359375" layoutX="255.0" layoutY="266.0" startX="-104.0" startY="-10.71429443359375" stroke="#9702e7" />
+            <Line endX="-60.0" endY="-53.71429443359375" layoutX="322.0" layoutY="252.0" startX="-24.0" startY="-8.71429443359375" stroke="#9702e7" />
+            <Line endX="-60.0" endY="-53.71429443359375" layoutX="358.0" layoutY="296.0" startX="-24.0" startY="-28.71429443359375" stroke="#9702e7" />
+            <Line endX="15.0" endY="-115.71429443359375" layoutX="392.0" layoutY="282.0" startX="-60.0" startY="-16.71429443359375" stroke="#9702e7" />
+            <Line endX="10.0" endY="-118.71429443359375" layoutX="398.0" layoutY="285.0" startX="43.0" startY="-74.71429443359375" stroke="#9702e7" />
+            <Line endX="10.0" endY="-118.71429443359375" layoutX="432.0" layoutY="330.0" startX="75.0" startY="-91.71429443359375" stroke="#9702e7" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9702e7" height="12.0" layoutX="602.0" layoutY="160.0" stroke="#9702e7" strokeType="INSIDE" width="11.0" />
+            <Line endX="42.70709228515625" endY="-105.0072021484375" layoutX="465.0" layoutY="344.0" startX="108.0" startY="-165.71429443359375" stroke="#9702e7" />
+            <Line endX="-41.0" endY="-33.71429443359375" layoutX="224.0" layoutY="238.0" startX="-104.29290771484375" startY="-12.421417236328125" stroke="#f80505" />
+            <Line endX="-49.0" endY="20.28570556640625" layoutX="288.0" layoutY="214.0" startX="-104.0" startY="-10.71429443359375" stroke="#f80505" />
+            <Line endX="-35.0" endY="-4.0072021484375" layoutX="338.0" layoutY="239.0" startX="-98.29290771484375" startY="-4.0072021484375" stroke="#f80505" />
+            <Line endX="-67.70709228515625" endY="-45.71429443359375" layoutX="399.0" layoutY="239.0" startX="-98.29290771484375" startY="-4.0072021484375" stroke="#f80505" />
+            <Line endX="-25.0" endY="-4.0072021484375" layoutX="430.0" layoutY="197.0" startX="-98.29290771484375" startY="-4.0072021484375" stroke="#f80505" />
+            <Line endX="-28.0" endY="3.28570556640625" layoutX="501.0" layoutY="197.0" startX="-98.29290771484375" startY="-4.0072021484375" stroke="#f80505" />
+            <Line endX="2.0" endY="12.28570556640625" layoutX="570.0" layoutY="205.0" startX="-98.29290771484375" startY="-4.0072021484375" stroke="#f80505" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f80505" height="12.0" layoutX="602.0" layoutY="193.0" stroke="#f80505" strokeType="INSIDE" width="11.0" />
+            <Line endX="-11.0" endY="8.28570556640625" layoutX="192.0" layoutY="293.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+            <Line endX="-52.0" endY="-59.71429443359375" layoutX="286.0" layoutY="322.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+            <Line endX="-39.0" endY="-31.71429443359375" layoutX="337.0" layoutY="282.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+            <Line endX="-70.0" endY="-56.71429443359375" layoutX="403.0" layoutY="269.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+            <Line endX="-62.0" endY="-50.71429443359375" layoutX="436.0" layoutY="233.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+            <Line endX="-42.0" endY="-12.71429443359375" layoutX="478.0" layoutY="201.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+            <Line endX="-29.0" endY="12.28570556640625" layoutX="538.0" layoutY="207.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+            <Line endX="-34.0" endY="-28.71429443359375" layoutX="611.0" layoutY="238.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#08cd2c" height="12.0" layoutX="602.0" layoutY="228.0" stroke="#08cd2c" strokeType="INSIDE" width="11.0" />
+            <Label layoutX="629.0" layoutY="156.0" prefHeight="20.0" prefWidth="68.0" text="All Sales" textFill="#0a0909">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="629.0" layoutY="188.0" prefHeight="20.0" prefWidth="117.0" text="Vegetables Sales" textFill="#0a0909">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="629.0" layoutY="224.0" prefHeight="20.0" prefWidth="89.0" text="Fruits Sales" textFill="#0a0909">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="77.0" layoutY="114.0" prefHeight="20.0" prefWidth="53.0" text="Today" textFill="#3c00ff">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Line endX="-70.70709228515625" endY="-64.42141723632812" layoutX="332.0" layoutY="262.0" startX="-115.0" startY="-17.71429443359375" stroke="#9702e7" />
+            <Line endX="-73.0" endY="-50.71429443359375" layoutX="192.0" layoutY="276.0" startX="-104.0" startY="-10.71429443359375" stroke="#f80505" />
+            <ImageView fitHeight="4.0" fitWidth="768.0" layoutX="4.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="220.0" layoutY="107.0" prefHeight="0.0" prefWidth="744.0" />
+      <JFXButton buttonType="RAISED" layoutX="225.0" layoutY="58.0" onAction="#wholesaleOrdersOnAction" prefHeight="36.0" prefWidth="190.0" style="-fx-background-color: #ee4949;" text="Wholesale Orders" textFill="#0d0c0c">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="PLUS" size="18" wrappingWidth="23.14285773038864" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnLogOut" buttonType="RAISED" layoutX="875.0" layoutY="64.0" onAction="#logoutBtnOnAction" prefHeight="27.0" prefWidth="89.0" style="-fx-background-color: #1eb523;" text="Log Out" textFill="#030303">
+         <graphic>
+            <FontAwesomeIconView glyphName="REPLY" size="18" wrappingWidth="22.14285773038864">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </FontAwesomeIconView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnClients" buttonType="RAISED" layoutY="444.0" onAction="#clientsBtnOnAction" prefHeight="36.0" prefWidth="209.0" ripplerFill="#b9b3b3" text="Clients" textFill="#f2f2f2" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="USER_SECRET" size="25" wrappingWidth="83.14286452531815" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Line endX="100.0" fill="#cdcdcd" layoutX="108.0" layoutY="300.0" startX="-107.0" startY="1.52587890625E-5" stroke="WHITE" />
+      <Line endX="100.0" fill="#cdcdcd" layoutX="108.0" layoutY="373.0" startX="-107.0" startY="1.52587890625E-5" stroke="WHITE" />
+      <Line endX="100.0" fill="#cdcdcd" layoutX="108.0" layoutY="479.0" startX="-107.0" startY="1.52587890625E-5" stroke="WHITE" />
+   </children>
+</AnchorPane>

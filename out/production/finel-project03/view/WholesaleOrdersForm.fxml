@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WholesaleOrdersFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b2d6f8" height="169.0" layoutX="14.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" width="693.0" />
+      <Label layoutX="26.0" layoutY="7.0" style="-fx-background-color: #ffffff;" text="Place New Order">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItemName" focusColor="BLACK" labelFloat="true" layoutX="153.0" layoutY="47.0" prefHeight="38.0" prefWidth="198.0" promptText="Item Name" style="-fx-border-color: #000000; -fx-border-radius: 50px;">
+         <padding>
+            <Insets left="10.0" top="16.0" />
+         </padding>
+      </JFXTextField>
+      <JFXTextField fx:id="txtEmail" focusColor="BLACK" labelFloat="true" layoutX="26.0" layoutY="103.0" prefHeight="38.0" prefWidth="232.0" promptText="E-Mail" style="-fx-border-color: #000000; -fx-border-radius: 50px;">
+         <padding>
+            <Insets left="10.0" top="16.0" />
+         </padding>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="464.0" layoutY="146.0" onAction="#addOrderOnAction" prefHeight="30.0" prefWidth="118.0" style="-fx-background-color: #092a7f;" text="Add New" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CART_ARROW_DOWN" size="25" wrappingWidth="29.428571701049805" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtClientName" focusColor="BLACK" labelFloat="true" layoutX="497.0" layoutY="47.0" prefHeight="38.0" prefWidth="198.0" promptText="Client Name" style="-fx-border-color: #000000; -fx-border-radius: 50px;">
+         <padding>
+            <Insets left="10.0" top="16.0" />
+         </padding>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQty" focusColor="BLACK" labelFloat="true" layoutX="270.0" layoutY="103.0" prefHeight="38.0" prefWidth="81.0" promptText="QTY" style="-fx-border-color: #000000; -fx-border-radius: 50px;">
+         <padding>
+            <Insets left="10.0" top="16.0" />
+         </padding>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="378.0" layoutY="110.0" onAction="#mailBtnOnAction" prefHeight="36.0" prefWidth="49.0" style="-fx-background-color: #092a7f;" text="." textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="ENVELOPE" size="25" wrappingWidth="19.428571701049805" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="1.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblOrder" layoutX="14.0" layoutY="194.0" prefHeight="200.0" prefWidth="693.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="75.0" text="Item Code" />
+          <TableColumn fx:id="colItemName" prefWidth="143.0" text="Item Name" />
+            <TableColumn fx:id="colClienID" prefWidth="89.0" text="Client ID" />
+            <TableColumn fx:id="colClientName" prefWidth="201.0" text="Client Name" />
+            <TableColumn fx:id="colQty" prefWidth="90.0" text="QTY (kg)" />
+            <TableColumn fx:id="colCost" prefWidth="94.0" text="Cost" />
+        </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbItemCode" focusColor="#121214" layoutX="26.0" layoutY="47.0" prefHeight="38.0" prefWidth="118.0" promptText="Item Code" />
+      <JFXComboBox fx:id="cmbClientID" focusColor="#121214" layoutX="368.0" layoutY="47.0" prefHeight="38.0" prefWidth="118.0" promptText="Client ID" />
+      <JFXButton buttonType="RAISED" layoutX="585.0" layoutY="146.0" onAction="#removeBtnOnAction" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: #b52424;" text="REMOVE" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="25" wrappingWidth="29.428571701049805" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Text fill="#040475" layoutX="375.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Send Mail">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblUnitPrice" alignment="CENTER_RIGHT" layoutX="113.0" layoutY="146.0" prefHeight="36.0" prefWidth="118.0" style="-fx-background-color: #109347;" text="0.00" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </Label>
+      <Text layoutX="39.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Price :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

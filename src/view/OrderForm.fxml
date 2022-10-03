@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="405.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderFormController">
+   <children>
+      <TableView fx:id="tblSecondCart" layoutX="170.0" layoutY="353.0" prefHeight="52.0" prefWidth="376.0">
+        <columns>
+          <TableColumn fx:id="colItemCodeTwo" prefWidth="75.0" text="Item Code" />
+          <TableColumn fx:id="colDescriptionTwo" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="colUnitPriceTwo" prefWidth="75.0" text="Unit Price" />
+            <TableColumn fx:id="colQTYTwo" prefWidth="75.0" text="QTY" />
+            <TableColumn fx:id="colTotalCostTwo" prefWidth="75.0" text="TotalCost" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="405.0" fitWidth="768.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/background.jpg" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b3ffd49e" height="94.0" layoutX="13.0" layoutY="100.0" stroke="#b5d6c4" strokeLineCap="ROUND" strokeMiterLimit="50.0" width="744.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c6d7e896" height="51.0" layoutX="13.0" layoutY="35.0" stroke="#8cc2f596" strokeLineCap="ROUND" width="744.0" />
+      <Label layoutX="14.0" layoutY="10.0" text="Place a Order" textFill="#dd0303">
+         <font>
+            <Font name="Century Schoolbook Bold" size="17.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#dd0303" glyphName="CIRCLE" wrappingWidth="18.285714149475098" />
+         </graphic>
+      </Label>
+      <JFXComboBox fx:id="cmbCustomer" focusColor="#0b0b0d" layoutX="113.0" layoutY="49.0" prefHeight="25.0" prefWidth="114.0" />
+      <Label layoutX="14.0" layoutY="51.0" text="Customer ID :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerName" focusColor="#0b0b0d" labelFloat="true" layoutX="241.0" layoutY="49.0" promptText="Name" />
+      <JFXTextField fx:id="txtContact" focusColor="#0b0b0d" labelFloat="true" layoutX="568.0" layoutY="49.0" promptText="Contact No." />
+      <JFXTextField fx:id="txtAddress" focusColor="#0b0b0d" labelFloat="true" layoutX="386.0" layoutY="49.0" prefHeight="25.0" prefWidth="172.0" promptText="Address" />
+      <JFXButton buttonType="RAISED" layoutX="723.0" layoutY="45.0" onAction="#addCustomerBtnOnAction" prefHeight="31.0" prefWidth="31.0" ripplerFill="#c9c9c9" style="-fx-background-color: #249354;" text="." textFill="WHITE">
+         <font>
+            <Font name="Constantia Bold" size="0.5" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="15" wrappingWidth="5.428571701049805" />
+         </graphic>
+      </JFXButton>
+      <Separator layoutX="712.0" layoutY="48.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="0.0" style="-fx-background-color: #000000;" />
+      <Label layoutX="14.0" layoutY="120.0" prefWidth="90.0" text="Item Code   :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="13.0" layoutY="91.0" prefHeight="0.0" prefWidth="742.0" style="-fx-background-color: #000000;" />
+      <JFXComboBox fx:id="cmbItemCode" focusColor="#0b0b0d" layoutX="113.0" layoutY="118.0" prefHeight="25.0" prefWidth="114.0" />
+      <JFXTextField fx:id="txtDescription" focusColor="#0b0b0d" labelFloat="true" layoutX="251.0" layoutY="118.0" prefHeight="25.0" prefWidth="179.0" promptText="Description" />
+      <JFXTextField fx:id="txtQtyOnHand" focusColor="#0b0b0d" labelFloat="true" layoutX="444.0" layoutY="118.0" prefHeight="25.0" prefWidth="82.0" promptText="QTY On Hand" />
+      <JFXTextField fx:id="txtUnitPrice" focusColor="#0b0b0d" labelFloat="true" layoutX="544.0" layoutY="118.0" prefHeight="25.0" prefWidth="90.0" promptText="Unit / 1kg Price" />
+      <JFXTextField fx:id="txtQty" alignment="CENTER_RIGHT" focusColor="#0b0b0d" labelFloat="true" layoutX="671.0" layoutY="118.0" onKeyReleased="#Number_Released" prefHeight="25.0" prefWidth="82.0" promptText="QTY" />
+      <Separator layoutX="648.0" layoutY="118.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="0.0" style="-fx-background-color: #000000;" />
+      <JFXButton fx:id="btnAddCart" buttonType="RAISED" layoutX="634.0" layoutY="152.0" onAction="#addToCartBtnOnAction" prefHeight="31.0" prefWidth="121.0" style="-fx-background-color: #e42121;" text=" Add To Cart" textFill="#f2f2f2">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CART_PLUS" size="28" />
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="tblCart" layoutX="13.0" layoutY="203.0" prefHeight="148.0" prefWidth="742.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="85.0" text="Item Code" />
+          <TableColumn fx:id="colDescription" prefWidth="193.0" text="Description" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="154.0" text="Unit Price(Rs.)" />
+            <TableColumn fx:id="colQty" prefWidth="89.0" text="QTY/KG" />
+            <TableColumn fx:id="colTotal" prefWidth="127.0" text="Total Cost" />
+            <TableColumn fx:id="colRemove" prefWidth="93.0" text="---" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="633.0" layoutY="361.0" onAction="#placeOrderBtnOnAction" prefHeight="36.0" prefWidth="121.0" style="-fx-background-color: #e42121;" text="Place Order" textFill="#f2f2f2">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CART_ARROW_DOWN" size="25" wrappingWidth="26.142857551574707" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="13.0" layoutY="359.0" prefHeight="39.0" prefWidth="65.0" style="-fx-background-color: #e4dc07;" text="TOTAL :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="78.0" layoutY="359.0" prefHeight="39.0" prefWidth="114.0" style="-fx-background-color: #e4dc07;" text="0.00" textFill="#bf0303">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="525.0" layoutY="361.0" onAction="#printBillOnAction" prefHeight="36.0" prefWidth="99.0" style="-fx-background-color: #e42121;" text="Print Bill" textFill="#f2f2f2">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PRINT" size="25" wrappingWidth="28.142857551574707" />
+         </graphic>
+      </JFXButton>
+      <Separator layoutX="13.0" layoutY="29.0" prefHeight="0.0" prefWidth="742.0" style="-fx-background-color: #000000;" />
+   </children>
+</AnchorPane>

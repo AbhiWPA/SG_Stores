@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="294.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AboutFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="270.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="697.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#f78892" />
+                  <Stop color="#81b1eb" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <JFXTextArea editable="false" focusColor="#030d2c" layoutX="41.0" layoutY="34.0" prefHeight="231.0" prefWidth="618.0" style="-fx-border-color: #000000; -fx-background-color: #ffffff;" text="S.G. Vegetable &amp; Fruit Shop is a vegetables and fruit retail store in Pannipitiya Town. They &#10;have more extra branches in Dambulla, Manning Market, Kotikawatte, Matale, &#10;Polonnaruwa towns. S.G. Vegetables and Fruits shop owner imports goods once a week &#10;and they are communicate with their branches and there works many employees, vehicles.&#10;Because of that the business owner wants a computer system for manage these activities. &#10;This system can make orders (Wholesale/other), print bills, add employees etc. &#10;&#10;Developer : W.P.Abhishek Ashinsa&#10;Syetem Version : 3.1.0&#10;">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextArea>
+   </children>
+</AnchorPane>

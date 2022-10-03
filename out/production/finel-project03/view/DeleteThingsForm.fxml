@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="294.0" prefWidth="729.0" style="-fx-background-color: #ffffff80;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeleteThingsFormController">
+   <children>
+      <JFXComboBox fx:id="cmbItemCode" focusColor="#0b0c10" labelFloat="true" layoutX="14.0" layoutY="61.0" prefHeight="35.0" prefWidth="118.0" promptText="Item Code" />
+      <JFXComboBox fx:id="cmbCustomerID" focusColor="#0b0c10" labelFloat="true" layoutX="145.0" layoutY="61.0" prefHeight="35.0" prefWidth="118.0" promptText="Customer ID" />
+      <JFXComboBox fx:id="cmbEmployeeID" focusColor="#0b0c10" labelFloat="true" layoutX="277.0" layoutY="61.0" prefHeight="35.0" prefWidth="118.0" promptText="Employee ID" />
+      <JFXComboBox fx:id="cmbVehicleNo" focusColor="#0b0c10" labelFloat="true" layoutX="410.0" layoutY="61.0" prefHeight="35.0" prefWidth="118.0" promptText="Vehicle No." />
+      <JFXComboBox fx:id="cmbWholeSale" focusColor="#0b0c10" labelFloat="true" layoutX="543.0" layoutY="61.0" prefHeight="35.0" prefWidth="152.0" promptText="Whole_Sale_Or_ID" />
+      <Text fill="#f50000" layoutX="49.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select ID for Delete a Record">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView fill="#bf0909" glyphName="CIRCLE" layoutX="20.0" layoutY="36.0" size="17" />
+      <Separator layoutX="14.0" layoutY="49.0" prefHeight="4.0" prefWidth="681.0" style="-fx-background-color: #000000;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="110.0" layoutX="14.0" layoutY="114.0" stroke="BLACK" strokeType="INSIDE" width="681.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#86afe4" />
+                  <Stop color="#e396eb" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label fx:id="label1" layoutX="21.0" layoutY="130.0" prefHeight="35.0" prefWidth="208.0" style="-fx-background-color: #ffffff;" />
+      <Label fx:id="label2" layoutX="251.0" layoutY="130.0" prefHeight="35.0" prefWidth="208.0" style="-fx-background-color: #ffffff;" />
+      <Label fx:id="label3" layoutX="478.0" layoutY="130.0" prefHeight="35.0" prefWidth="208.0" style="-fx-background-color: #ffffff;" />
+      <Label fx:id="label4" layoutX="21.0" layoutY="178.0" prefHeight="35.0" prefWidth="208.0" style="-fx-background-color: #ffffff;" />
+      <Label fx:id="label5" layoutX="251.0" layoutY="178.0" prefHeight="35.0" prefWidth="208.0" style="-fx-background-color: #ffffff;" />
+      <Label fx:id="label6" layoutX="478.0" layoutY="178.0" prefHeight="35.0" prefWidth="208.0" style="-fx-background-color: #ffffff;" />
+      <JFXButton buttonType="RAISED" layoutX="539.0" layoutY="245.0" onAction="#deleteRecordOnAction" prefHeight="37.0" prefWidth="158.0" style="-fx-background-color: RED;" text="Delete Record" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="MINUS" size="16" wrappingWidth="20.571428298950195" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

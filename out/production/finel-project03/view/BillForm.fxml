@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="616.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BillFormController">
+   <children>
+      <Text layoutX="110.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S.G. VEGETABLES &amp; FRUITS">
+         <font>
+            <Font name="Tahoma Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="146.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact us : 01156478564">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="75.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Get fresh &amp; cool fruits Vegetables on your own way&quot;">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="133.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No. 24/3, Old Road, Pannipitiya">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="119.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sgvegetablesandfruits454@gmail.com">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+      </Text>
+      <Line endX="259.0" layoutX="164.0" layoutY="135.0" startX="-153.0" strokeLineCap="ROUND" strokeMiterLimit="20.0" />
+      <Text layoutX="39.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order No. :" />
+      <Text layoutX="219.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer :" />
+      <Text layoutX="68.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :" />
+      <Text layoutX="249.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time :" />
+      <Label fx:id="lblOrderId" layoutX="108.0" layoutY="150.0" text="Or009">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="108.0" layoutY="181.0" text="March 17, 2022">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomerName" layoutX="289.0" layoutY="150.0" text="Poorna Shakthi">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="292.0" layoutY="181.0" text="03.56">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Line endX="259.0" layoutX="168.0" layoutY="558.0" startX="-153.0" strokeLineCap="ROUND" strokeMiterLimit="20.0" />
+      <Line endX="259.0" layoutX="168.0" layoutY="528.0" startX="-153.0" strokeLineCap="ROUND" strokeMiterLimit="20.0" />
+      <Label layoutX="280.0" layoutY="534.0" text="Total :" textFill="#100c0c">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" alignment="CENTER_RIGHT" layoutX="356.0" layoutY="534.0" prefHeight="21.0" prefWidth="71.0" text="0.00" textFill="#100c0c">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Text layoutX="115.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System developed by Abhishek Ashinsa">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblBill" layoutX="15.0" layoutY="205.0" prefHeight="313.0" prefWidth="413.0" style="-fx-border-color: #ffffff;">
+        <columns>
+          <TableColumn fx:id="colDesc" prefWidth="111.0" style="-fx-background-color: #ffffff;" text="Description" />
+          <TableColumn fx:id="colQty" prefWidth="62.0" style="-fx-background-color: #ffffff;" text="QTY" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="69.0" style="-fx-background-color: #ffffff;" text="UnitPrice" />
+            <TableColumn fx:id="colDiscount" prefWidth="84.0" style="-fx-background-color: #ffffff;" text="Discount" />
+            <TableColumn fx:id="colAmount" prefWidth="85.0" style="-fx-background-color: #ffffff;" text="Amount" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

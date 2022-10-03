@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="470.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <ImageView fitHeight="470.0" fitWidth="792.0" focusTraversable="true" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/Vegetable-Fruits.jpg" />
+         </image>
+         <effect>
+            <BoxBlur iterations="3" />
+         </effect>
+      </ImageView>
+      <Pane layoutX="458.0" layoutY="31.0" prefHeight="399.0" prefWidth="320.0" style="-fx-background-color: #ffffff62; -fx-background-radius: 35px; -fx-border-radius: 35px;">
+         <effect>
+            <DropShadow color="#575757" height="180.93" radius="103.2925" width="234.24" />
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Text layoutX="33.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter User Name &amp; Password">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Text>
+            <Label layoutX="29.0" layoutY="14.0" text="Log In" textFill="#070505">
+               <font>
+                  <Font name="Arial" size="50.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="USER" layoutX="20.0" layoutY="173.0" size="32" text="" />
+            <FontAwesomeIconView glyphName="LOCK" layoutX="23.0" layoutY="260.0" size="32" text="" />
+            <JFXButton buttonType="RAISED" layoutX="45.0" layoutY="315.0" prefHeight="36.0" prefWidth="118.0" ripplerFill="#e1e1e1" style="-fx-background-color: #0e6b90; -fx-background-radius: 20px; -fx-border-radius: 20px;" text="Cancel" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Separator layoutX="48.0" layoutY="148.0" orientation="VERTICAL" prefHeight="30.0" prefWidth="0.0" style="-fx-background-color: #a7a5a5;" />
+            <Separator layoutX="48.0" layoutY="231.0" orientation="VERTICAL" prefHeight="30.0" prefWidth="0.0" style="-fx-background-color: #a7a5a5;" />
+            <JFXPasswordField fx:id="txtPassword" focusColor="BLACK" labelFloat="true" layoutX="55.0" layoutY="226.0" prefHeight="30.0" prefWidth="253.0" style="-fx-border-color: #ffffff; -fx-border-radius: 50px;" unFocusColor="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" top="16.0" />
+               </padding>
+            </JFXPasswordField>
+            <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="190.0" layoutY="315.0" onAction="#loginOnAction" prefHeight="36.0" prefWidth="118.0" ripplerFill="#e1e1e1" style="-fx-background-color: #0e6b90; -fx-background-radius: 20px; -fx-border-radius: 20px;" text="Sign In" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Separator layoutX="12.0" layoutY="103.0" prefHeight="16.0" prefWidth="301.0" />
+            <Label layoutX="71.0" layoutY="218.0" prefWidth="62.0" text="Password">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUserName" focusColor="BLACK" layoutX="60.0" layoutY="143.0" prefHeight="38.0" prefWidth="253.0" style="-fx-border-color: #ffffff; -fx-border-radius: 50px;" unFocusColor="WHITE">
+               <padding>
+                  <Insets left="10.0" top="16.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="73.0" layoutY="135.0" prefWidth="62.0" text="User Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="16.0" layoutY="31.0" prefHeight="399.0" prefWidth="433.0" style="-fx-background-color: #ffffff62; -fx-background-radius: 30px; -fx-border-radius: 30px;">
+         <children>
+            <Label layoutX="22.0" layoutY="115.0" text="VEGETABLES &amp; FRUITS SHOP" textFill="#110101">
+               <font>
+                  <Font name="Cambria Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="146.0" layoutY="22.0" text="S.G." textFill="#120000">
+               <font>
+                  <Font name="Century Schoolbook Bold" size="79.0" />
+               </font>
+            </Label>
+            <Separator layoutX="4.0" layoutY="148.0" prefHeight="16.0" prefWidth="424.0" />
+            <Text fontSmoothingType="LCD" layoutX="42.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Get fresh &amp; cool fruits &amp; Vegetables on your own way" wrappingWidth="347.3046875">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Text>
+            <FontAwesomeIconView layoutX="12.0" layoutY="197.0" size="15" />
+            <ImageView fitHeight="145.0" fitWidth="139.0" layoutX="147.0" layoutY="240.0" opacity="0.66" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../assets/logo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

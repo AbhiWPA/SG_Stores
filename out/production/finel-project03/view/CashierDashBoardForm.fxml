@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="442.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CashierDashBoardFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f08b9" height="45.0" stroke="#1f08b9" strokeType="INSIDE" width="772.0" />
+      <Text fill="WHITE" layoutX="9.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S.G. VEGETABLES &amp; FRUITS SHOP" wrappingWidth="111.62109375">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#fcfcfc" layoutX="621.0" layoutY="16.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label layoutX="673.0" layoutY="4.0" prefHeight="17.0" prefWidth="80.0" text="Cashier" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Text fill="#fcfcfc" layoutX="621.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID       :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Label layoutX="673.0" layoutY="23.0" prefHeight="17.0" prefWidth="49.0" text="U001" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="17.0" fitWidth="39.0" layoutX="158.0" layoutY="11.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/2bernx4.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" layoutX="263.0" layoutY="13.0" text="Sunday, January 25, 2022" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="459.0" layoutY="13.0" text="22:16:56 PM" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Circle fill="WHITE" layoutX="593.0" layoutY="21.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+      <FontAwesomeIconView glyphName="USER" layoutX="580.0" layoutY="32.0" size="33" text="" />
+      <Separator layoutX="569.0" layoutY="1.0" orientation="VERTICAL" prefHeight="45.0" prefWidth="1.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="45.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="772.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.1761904761904762">
+               <stops>
+                  <Stop color="#5993c9" />
+                  <Stop color="#838383" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="48.0" onAction="#customerBtnOnAction" prefHeight="36.0" prefWidth="145.0" style="-fx-background-color: #51029a;" text="Customer" textFill="#f5f5f5">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CARET_DOWN" size="20" text="" wrappingWidth="27.428571701049805">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="171.0" layoutY="50.0" onAction="#orderBtnOnAction" prefHeight="36.0" prefWidth="145.0" style="-fx-background-color: #51029a;" text="Order" textFill="#f5f5f5">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CARET_DOWN" size="20" text="" wrappingWidth="27.428571701049805">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="329.0" layoutY="50.0" onAction="#fruitsBtnOnAction" prefHeight="36.0" prefWidth="145.0" style="-fx-background-color: #51029a;" text="Fruits" textFill="#f5f5f5">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CARET_DOWN" size="20" text="" wrappingWidth="27.428571701049805">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="488.0" layoutY="51.0" onAction="#vegetableBtnOnAction" prefHeight="36.0" prefWidth="157.0" style="-fx-background-color: #51029a;" text="Vegetables" textFill="#f5f5f5">
+         <font>
+            <Font name="Tahoma Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CARET_DOWN" size="20" text="" wrappingWidth="27.428571701049805">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </graphic>
+      </JFXButton>
+      <AnchorPane fx:id="cashierPane" layoutX="4.0" layoutY="90.0" prefHeight="405.0" prefWidth="768.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="405.0" layoutX="-4.0" stroke="BLACK" strokeType="INSIDE" width="772.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#4d93d3" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label layoutX="152.0" layoutY="57.0" prefHeight="32.0" prefWidth="506.0" text="Welcome To S.G. Vegetables &amp; Fruits Shop...!" textFill="RED">
+               <font>
+                  <Font name="Tahoma Bold" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="250.0" fitWidth="261.0" layoutX="254.0" layoutY="113.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../assets/logo.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <JFXButton fx:id="btnLogOut" buttonType="RAISED" layoutX="667.0" layoutY="56.0" onAction="#logoutBtnOnAction" prefHeight="27.0" prefWidth="89.0" style="-fx-background-color: #c90707;" text="Log Out" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REPLY" size="18" wrappingWidth="22.14285773038864">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </FontAwesomeIconView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="405.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VehiclesFormController">
+   <children>
+      <ImageView fitHeight="405.0" fitWidth="768.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/background.jpg" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#81ffe269" height="125.0" layoutX="10.0" layoutY="12.0" stroke="#f3f77269" strokeLineCap="ROUND" strokeWidth="2.0" width="748.0" />
+      <JFXTextField fx:id="txtVnumber" focusColor="#0e0f11" labelFloat="true" layoutX="23.0" layoutY="36.0" onKeyReleased="#Enter_Key_Released" prefHeight="25.0" prefWidth="166.0" promptText="Vehicle Nmber">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtVmodel" focusColor="#0e0f11" labelFloat="true" layoutX="404.0" layoutY="36.0" onKeyReleased="#Enter_Key_Released" prefHeight="25.0" prefWidth="166.0" promptText="Vehicle Model">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cbxVtype" focusColor="#0e0f11" labelFloat="true" layoutX="215.0" layoutY="36.0" prefHeight="30.0" prefWidth="166.0" promptText="Vehicle Type" />
+      <JFXDatePicker defaultColor="#101414" layoutX="721.0" layoutY="39.0" overLay="true" prefHeight="25.0" prefWidth="13.0" />
+      <Separator layoutX="10.0" layoutY="146.0" prefHeight="2.0" prefWidth="750.0" style="-fx-background-color: #000000;" />
+      <TableView fx:id="tblVehicle" layoutX="9.0" layoutY="180.0" prefHeight="200.0" prefWidth="750.0">
+        <columns>
+          <TableColumn fx:id="colVehicleNo" prefWidth="162.0" text="Vehicle Number" />
+          <TableColumn fx:id="colVehicleType" prefWidth="222.0" text="Vehicle Type" />
+            <TableColumn fx:id="colVehicleModel" prefWidth="201.0" text="Vehicle Model" />
+            <TableColumn fx:id="colDate" prefWidth="164.0" text="Added Date" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnAddVehicle" buttonType="RAISED" layoutX="570.0" layoutY="88.0" onAction="#addVehicleOnAction" prefHeight="39.0" prefWidth="171.0" ripplerFill="#b6b4cd" style="-fx-background-color: #130c68;" text="Add New Vehicle" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView cache="true" cacheHint="ROTATE" fill="WHITE" glyphName="PLUS" size="15" wrappingWidth="26.0" />
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="txtDate" focusColor="#0e0f11" labelFloat="true" layoutX="585.0" layoutY="37.0" onKeyReleased="#Enter_Key_Released" prefHeight="30.0" prefWidth="128.0" promptText="Date">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

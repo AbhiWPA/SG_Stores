@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="405.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BranchesFormController">
+   <children>
+      <ImageView fitHeight="405.0" fitWidth="768.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/background.jpg" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8ec3f252" height="165.0" layoutX="10.0" layoutY="14.0" stroke="#7abeff" strokeType="INSIDE" width="749.0" />
+      <JFXTextField fx:id="txtBrCode" focusColor="#16171b" labelFloat="true" layoutX="29.0" layoutY="33.0" onAction="#txtBranchCodeOnAction" onKeyReleased="#Enter_key_Releaased" promptText="Branch Code">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBrAddress" focusColor="#16171b" labelFloat="true" layoutX="205.0" layoutY="33.0" onKeyReleased="#Enter_key_Releaased" prefHeight="30.0" prefWidth="206.0" promptText="Branch Address">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBrMail" focusColor="#16171b" labelFloat="true" layoutX="435.0" layoutY="33.0" onKeyReleased="#Enter_key_Releaased" prefHeight="30.0" prefWidth="179.0" promptText="E-Mail">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBrEmployees" focusColor="#16171b" labelFloat="true" layoutX="631.0" layoutY="33.0" onKeyReleased="#Enter_key_Releaased" prefHeight="30.0" prefWidth="113.0" promptText="No. of Employees">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBrManID" focusColor="#16171b" labelFloat="true" layoutX="29.0" layoutY="88.0" onKeyReleased="#Enter_key_Releaased" prefHeight="30.0" prefWidth="130.0" promptText="Branch Manager Id">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtBrManName" focusColor="#16171b" labelFloat="true" layoutX="205.0" layoutY="88.0" onKeyReleased="#Enter_key_Releaased" prefHeight="30.0" prefWidth="157.0" promptText="Branch Manager Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" focusColor="#16171b" labelFloat="true" layoutX="394.0" layoutY="88.0" onKeyReleased="#Enter_key_Releaased" prefHeight="30.0" prefWidth="130.0" promptText="Tel. Number">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAddNew" buttonType="RAISED" layoutX="601.0" layoutY="84.0" onAction="#newBranchOnAction" prefHeight="39.0" prefWidth="143.0" ripplerFill="#c2c4c6a1" style="-fx-background-color: #500893;" text="Open New Branch" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="108.0" layoutY="140.0" onAction="#sendMailBtnOnAction" prefHeight="30.0" prefWidth="38.0" ripplerFill="#013b75a1" style="-fx-background-color: #0dbdee;" text="." textFill="WHITE">
+         <font>
+            <Font size="0.5" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="ENVELOPE" size="15" wrappingWidth="9.0" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="29.0" layoutY="155.0" text="Send a Mail :" textFill="RED" />
+      <TableView fx:id="tblBranches" layoutX="10.0" layoutY="189.0" prefHeight="214.0" prefWidth="749.0">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="61.0" text="Code" />
+          <TableColumn fx:id="colAddress" prefWidth="138.0" text="Address" />
+            <TableColumn fx:id="colMail" prefWidth="144.0" text="E-Mail" />
+            <TableColumn fx:id="colEmployee" prefWidth="73.0" text="No. of Emp." />
+            <TableColumn fx:id="colManagerID" prefWidth="90.0" text="Manager Id" />
+            <TableColumn fx:id="colManagerName" prefWidth="132.0" text="Manager Name" />
+            <TableColumn fx:id="colContact" prefWidth="110.0" text="Te. Number" />
+        </columns>
+      </TableView>
+      <Separator layoutX="11.0" layoutY="182.0" prefHeight="0.0" prefWidth="749.0" style="-fx-background-color: #000000;" />
+      <JFXButton buttonType="RAISED" layoutX="550.0" layoutY="136.0" onAction="#updateBranchBtnOnAction" prefHeight="39.0" prefWidth="194.0" ripplerFill="#c2c4c6a1" style="-fx-background-color: #500893;" text="Update Branch Details" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="15" wrappingWidth="20.857142448425293" />
+         </graphic>
+      </JFXButton>
+      <TextArea fx:id="txtContent" layoutX="159.0" layoutY="129.0" prefHeight="47.0" prefWidth="351.0" promptText="Type message here to Send" />
+      <Separator layoutX="528.0" layoutY="129.0" orientation="VERTICAL" prefHeight="47.0" prefWidth="0.0" />
+   </children>
+</AnchorPane>

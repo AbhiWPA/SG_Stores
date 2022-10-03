@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="signUpPane" prefHeight="426.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpFormController">
+   <children>
+      <Pane prefHeight="426.0" prefWidth="335.0" style="-fx-background-color: #ffffff67; -fx-background-radius: 70px; -fx-border-radius: 70px;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Separator layoutX="8.0" layoutY="59.0" prefHeight="16.0" prefWidth="320.0" />
+            <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="39.0" layoutY="87.0" prefHeight="30.0" prefWidth="258.0" promptText="User Name" style="-fx-border-color: #ffffff; -fx-border-radius: 20px;" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="15.0" top="12.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="39.0" layoutY="135.0" prefHeight="30.0" prefWidth="258.0" promptText="Name" style="-fx-border-color: #ffffff; -fx-border-radius: 20px;" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" top="12.0" />
+               </padding>
+            </JFXTextField>
+            <JFXTextField focusColor="BLACK" labelFloat="true" layoutX="39.0" layoutY="183.0" prefHeight="30.0" prefWidth="258.0" promptText="E-mail" style="-fx-border-color: #ffffff; -fx-border-radius: 20px;" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" top="12.0" />
+               </padding>
+            </JFXTextField>
+            <JFXPasswordField focusColor="BLACK" labelFloat="true" layoutX="39.0" layoutY="233.0" prefHeight="25.0" prefWidth="258.0" promptText="Password" style="-fx-border-color: #ffffff; -fx-border-radius: 20px;" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" top="12.0" />
+               </padding>
+            </JFXPasswordField>
+            <Text fill="#2f2424" layoutX="48.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="enter least 8 or more charactors">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Text>
+            <JFXPasswordField focusColor="BLACK" labelFloat="true" layoutX="39.0" layoutY="295.0" prefHeight="25.0" prefWidth="258.0" promptText="Confirm Pasword" style="-fx-border-color: #ffffff; -fx-border-radius: 20px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" top="12.0" />
+               </padding>
+            </JFXPasswordField>
+            <RadioButton layoutX="25.0" layoutY="346.0" mnemonicParsing="false" text="I Accept" />
+            <Hyperlink layoutX="89.0" layoutY="343.0" text="Terms and Conditions" />
+            <Text fill="#252424" layoutX="213.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&amp; Privacy Policy." />
+            <JFXButton buttonType="RAISED" layoutX="99.0" layoutY="374.0" prefHeight="36.0" prefWidth="203.0" ripplerFill="#e1e1e1" style="-fx-background-color: #0e6b90; -fx-background-radius: 20px; -fx-border-radius: 20px;" text="Sign Up" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="32.0" layoutY="380.0" onAction="#backButtonOnAction" prefHeight="29.0" prefWidth="52.0" ripplerFill="#b5bac6" style="-fx-background-color: #0e6b90; -fx-background-radius: 20px; -fx-border-radius: 20px;" text=".">
+               <graphic>
+                  <FontAwesomeIconView fx:id="back" fill="#f5f5f5" glyphName="ARROW_LEFT" size="20" text="" wrappingWidth="20.14285659790039" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Label layoutX="37.0" layoutY="-7.0" text="Sign Up" textFill="#070505">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+      <Text layoutX="34.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Fill Your Informations Below">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

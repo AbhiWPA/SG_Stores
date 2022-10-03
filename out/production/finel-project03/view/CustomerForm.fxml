@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="405.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <ImageView fitHeight="405.0" fitWidth="768.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/background.jpg" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7e7e7" height="368.0" layoutX="582.0" layoutY="23.0" stroke="#e7e7e7" strokeType="INSIDE" width="181.0" />
+      <Label layoutX="14.0" layoutY="24.0" text="Customer Id :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="297.0" layoutY="24.0" text="Name :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="80.0" text="Address :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="297.0" layoutY="80.0" text="Mobile Number :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerID" focusColor="#0c0f17" layoutX="111.0" layoutY="22.0" onKeyReleased="#key_Entered_Event" prefHeight="25.0" prefWidth="165.0" />
+      <JFXTextField fx:id="txtCustomerAddress" focusColor="#0c0f17" layoutX="114.0" layoutY="78.0" onKeyReleased="#key_Entered_Event" prefHeight="25.0" prefWidth="165.0" />
+      <JFXTextField fx:id="txtCustomerName" focusColor="#0c0f17" layoutX="361.0" layoutY="22.0" onKeyReleased="#key_Entered_Event" prefHeight="25.0" prefWidth="192.0" />
+      <JFXTextField fx:id="txtContact" focusColor="#0c0f17" layoutX="421.0" layoutY="78.0" onKeyReleased="#key_Entered_Event" prefHeight="25.0" prefWidth="132.0" />
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="384.0" layoutY="125.0" onAction="#addCustomerOnAction" prefHeight="38.0" prefWidth="165.0" ripplerFill="#b8b9bc" style="-fx-background-color: #1328b5;" text="+ Add Customer" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblCustomer" layoutX="8.0" layoutY="168.0" prefHeight="223.0" prefWidth="563.0">
+        <columns>
+          <TableColumn fx:id="colCusId" prefWidth="83.0" text="Customer Id" />
+          <TableColumn fx:id="colName" prefWidth="128.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="195.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="155.0" text="MobileNumber" />
+        </columns>
+      </TableView>
+      <Label layoutX="609.0" layoutY="32.0" prefHeight="27.0" prefWidth="141.0" text="Update Customer :" textFill="#1e1111">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUpdateID" focusColor="#0c0f17" labelFloat="true" layoutX="597.0" layoutY="87.0" onAction="#txtSearchOnAction" prefHeight="29.0" prefWidth="157.0" promptText="customer Id">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUpdateName" focusColor="#0c0f17" labelFloat="true" layoutX="597.0" layoutY="144.0" prefHeight="29.0" prefWidth="157.0" promptText="customer Name">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUpdateAddress" focusColor="#0c0f17" labelFloat="true" layoutX="597.0" layoutY="207.0" prefHeight="29.0" prefWidth="157.0" promptText="customer Address">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUpdateNumber" focusColor="#0c0f17" labelFloat="true" layoutX="597.0" layoutY="265.0" prefHeight="29.0" prefWidth="157.0" promptText="mobile Number">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="609.0" layoutY="338.0" onAction="#updateBtnOnAction" prefHeight="31.0" prefWidth="141.0" ripplerFill="#b8b9bc" style="-fx-background-color: #1328b5;" text="Update Customer" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

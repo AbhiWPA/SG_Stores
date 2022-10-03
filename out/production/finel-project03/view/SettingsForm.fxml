@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="405.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SettingsFormController">
+   <children>
+      <ImageView fitHeight="405.0" fitWidth="768.0" opacity="0.72" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/background.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="6.0" text="Security Settings &amp; Income Repors" textFill="#b50202">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton alignment="BOTTOM_LEFT" layoutX="24.0" layoutY="51.0" onAction="#securityBtnOnAction" prefHeight="39.0" prefWidth="154.0" style="-fx-background-color: #111393;" text="Security" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SHIELD" size="18" wrappingWidth="27.571428298950195" />
+         </graphic>
+      </JFXButton>
+      <JFXButton alignment="TOP_LEFT" layoutX="194.0" layoutY="51.0" onAction="#reportsBtnOnAction" prefHeight="39.0" prefWidth="190.0" style="-fx-background-color: #111393;" text="Income Reports" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="18" wrappingWidth="24.714284896850586" />
+         </graphic>
+      </JFXButton>
+      <Separator layoutX="8.0" layoutY="40.0" prefHeight="11.0" prefWidth="751.0" />
+      <AnchorPane fx:id="securityContext" layoutX="24.0" layoutY="101.0" prefHeight="294.0" prefWidth="729.0">
+         <children>
+            <Label layoutX="210.0" layoutY="35.0" text="Change the System Settings...!" textFill="#d30707">
+               <font>
+                  <Font name="Tahoma Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="194.0" fitWidth="200.0" layoutX="265.0" layoutY="78.0" opacity="0.88" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../assets/logo.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <JFXButton alignment="TOP_LEFT" layoutX="599.0" layoutY="51.0" onAction="#aboutBtnOnAction" prefHeight="39.0" prefWidth="154.0" style="-fx-background-color: #111393;" text="About" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="INFO_CIRCLE" size="18" wrappingWidth="40.2857141494751" />
+         </graphic>
+      </JFXButton>
+      <JFXButton alignment="TOP_LEFT" layoutX="402.0" layoutY="51.0" onAction="#deleteThingsBtnOnAction" prefHeight="39.0" prefWidth="171.0" style="-fx-background-color: #111393;" text="Delete Things" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="18" wrappingWidth="25.142857551574707" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

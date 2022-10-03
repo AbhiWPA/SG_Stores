@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="405.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SellingFormController">
+   <children>
+      <ImageView fitHeight="405.0" fitWidth="768.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/background.jpg" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <Rectangle fill="#fa6b0c" height="73.0" layoutX="32.0" layoutY="70.0" smooth="false" stroke="#fc700c" strokeType="INSIDE" width="200.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Label layoutX="32.0" layoutY="14.0" text="Today Sellings" textFill="#e82727" underline="true">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Rectangle fill="#3dbb5d" height="73.0" layoutX="284.0" layoutY="71.0" smooth="false" stroke="#3dbb5d" strokeType="INSIDE" width="200.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Rectangle fill="#f2ff09" height="73.0" layoutX="540.0" layoutY="70.0" smooth="false" stroke="#f2ff09" strokeType="INSIDE" width="200.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Text fill="#0d0b0b" fontSmoothingType="LCD" layoutX="51.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Fruits Sellings">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#0d0b0b" fontSmoothingType="LCD" layoutX="299.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Vegetables Sellings" wrappingWidth="170.00000381469727">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#0d0b0b" fontSmoothingType="LCD" layoutX="559.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Sellings">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblTotalFruitSelling" layoutX="104.0" layoutY="112.0" text="10">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalVegetabeSelling" layoutX="374.0" layoutY="112.0" text="10">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalItemSelling" layoutX="627.0" layoutY="112.0" text="20">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Separator layoutX="34.0" layoutY="150.0" prefHeight="0.0" prefWidth="706.0" />
+      <Label layoutX="34.0" layoutY="163.0" text="Select Table :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbTables" focusColor="#131417" layoutX="147.0" layoutY="161.0" prefHeight="25.0" prefWidth="170.0" promptText="select" unFocusColor="BLACK" />
+      <AnchorPane fx:id="vfTablePane" layoutX="32.0" layoutY="192.0" prefHeight="211.0" prefWidth="706.0" style="-fx-background-color: #b1b1b1;" />
+      <Label layoutX="622.0" layoutY="24.0" text="Date :">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="668.0" layoutY="24.0" text="2022-02-28">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

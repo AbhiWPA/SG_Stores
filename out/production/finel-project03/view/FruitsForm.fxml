@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="405.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FruitsFormController">
+   <children>
+      <ImageView fitHeight="405.0" fitWidth="768.0" layoutY="-3.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/background.jpg" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c9ffdc" height="147.0" layoutX="10.0" layoutY="13.0" stroke="#f8b7b7" strokeType="INSIDE" width="559.0" />
+      <Label layoutX="23.0" layoutY="20.0" text="Add new Item for Stock :" textFill="#030202">
+         <font>
+            <Font name="Book Antiqua Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="80.0" prefHeight="21.0" prefWidth="76.0" text="Item Code :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItemCode" focusColor="#060505" layoutX="104.0" layoutY="78.0" onKeyReleased="#Enter_Key_Pressed" prefHeight="25.0" prefWidth="139.0" />
+      <Label layoutX="276.0" layoutY="45.0" prefHeight="21.0" prefWidth="86.0" text="Description  :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtDescription" focusColor="#060505" layoutX="372.0" layoutY="43.0" onKeyReleased="#Enter_Key_Pressed" prefHeight="25.0" prefWidth="191.0" />
+      <Label layoutX="29.0" layoutY="126.0" prefHeight="21.0" prefWidth="76.0" text="QTY           :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtQty" focusColor="#060505" layoutX="104.0" layoutY="124.0" onKeyReleased="#Enter_Key_Pressed" prefHeight="25.0" prefWidth="139.0" promptText="                                   (kg)" />
+      <JFXButton fx:id="btnAddStore" buttonType="RAISED" layoutX="337.0" layoutY="119.0" onAction="#btnAddOnAction" prefHeight="37.0" prefWidth="120.0" style="-fx-background-color: #fb2020;" text="Add New" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="15" />
+         </graphic></JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="466.0" layoutY="119.0" onAction="#btnUpdateOnAction" prefHeight="37.0" prefWidth="97.0" style="-fx-background-color: #fb2020;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="RETWEET" size="15" />
+         </graphic></JFXButton>
+      <TableView fx:id="tblFruits" layoutX="15.0" layoutY="168.0" prefHeight="228.0" prefWidth="729.0">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="128.0" style="-fx-background-color: #10b5f1;" text="Item Code" />
+            <TableColumn fx:id="colDescription" prefWidth="274.0" style="-fx-background-color: #10b5f1;" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="163.0" style="-fx-background-color: #10b5f1;" text="QTY on Hand" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="163.0" style="-fx-background-color: #10b5f1;" text="Price-1kg (Rs.)" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="141.0" fitWidth="165.0" layoutX="589.0" layoutY="15.0" opacity="0.56" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/Fruits.jpg" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <Text fontSmoothingType="LCD" layoutX="634.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Stock">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <Text fill="#171010" layoutX="683.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Items">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblAvailableFruits" layoutX="634.0" layoutY="70.0" text="25" textFill="#170202">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="45.0" prefHeight="21.0" prefWidth="76.0" text="Fruit Code :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbxCode" layoutX="104.0" layoutY="43.0" prefHeight="25.0" prefWidth="139.0" />
+      <Label layoutX="319.0" layoutY="82.0" prefHeight="21.0" prefWidth="52.0" text="Price :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtPrice" focusColor="#060505" layoutX="371.0" layoutY="78.0" onKeyReleased="#Enter_Key_Pressed" prefHeight="25.0" prefWidth="191.0" promptText="(Rs.)" />
+   </children>
+</AnchorPane>

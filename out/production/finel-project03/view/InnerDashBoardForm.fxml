@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="405.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InnerDashBoardFormController">
+   <children>
+      <ImageView fitHeight="405.0" fitWidth="768.0" layoutX="1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/background.jpg" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="117.0" layoutX="625.0" layoutY="56.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/Vege-Icon.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="69.0" fitWidth="102.0" layoutX="386.0" layoutY="49.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/Fruit-Ico.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="62.0" fitWidth="89.0" layoutX="147.0" layoutY="55.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assets/Emp-Ico.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#105da1d2" height="93.0" layoutX="32.0" layoutY="24.0" opacity="0.43" stroke="BLACK" strokeType="INSIDE" width="208.0" />
+      <Text layoutX="59.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Employees">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ef52ccb" height="93.0" layoutX="283.0" layoutY="25.0" opacity="0.43" stroke="BLACK" strokeType="INSIDE" width="208.0" />
+      <Text layoutX="315.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Fruits">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bc6de3b6" height="93.0" layoutX="535.0" layoutY="24.0" opacity="0.32" stroke="BLACK" strokeType="INSIDE" width="208.0" />
+      <Text layoutX="540.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Vegetables" wrappingWidth="197.9999942779541">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Label fx:id="txtTotalEmps" layoutX="68.0" layoutY="67.0" text="10">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtVegetables" layoutX="566.0" layoutY="64.0" text="10">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <LineChart layoutX="33.0" layoutY="144.0" prefHeight="257.0" prefWidth="565.0">
+         <xAxis>
+            <CategoryAxis animated="false" autoRanging="false" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis label="Persentage(%)" side="LEFT" upperBound="90.0" />
+         </yAxis>
+      </LineChart>
+      <Line endX="-42.0" endY="-43.71429443359375" layoutX="202.0" layoutY="309.0" startX="-104.0" startY="-10.71429443359375" stroke="#9702e7" />
+      <Line endX="-37.0" endY="-21.71429443359375" layoutX="265.0" layoutY="276.0" startX="-104.0" startY="-10.71429443359375" stroke="#9702e7" />
+      <Line endX="-60.0" endY="-53.71429443359375" layoutX="333.0" layoutY="263.0" startX="-104.29290771484375" startY="-9.421417236328125" stroke="#9702e7" />
+      <Line endX="-60.0" endY="-53.71429443359375" layoutX="332.0" layoutY="262.0" startX="-24.0" startY="-8.71429443359375" stroke="#9702e7" />
+      <Line endX="-60.0" endY="-53.71429443359375" layoutX="368.0" layoutY="306.0" startX="-24.0" startY="-28.71429443359375" stroke="#9702e7" />
+      <Line endX="15.0" endY="-115.71429443359375" layoutX="402.0" layoutY="292.0" startX="-60.0" startY="-16.71429443359375" stroke="#9702e7" />
+      <Line endX="10.0" endY="-118.71429443359375" layoutX="408.0" layoutY="295.0" startX="43.0" startY="-74.71429443359375" stroke="#9702e7" />
+      <Line endX="10.0" endY="-118.71429443359375" layoutX="442.0" layoutY="340.0" startX="75.0" startY="-91.71429443359375" stroke="#9702e7" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9702e7" height="12.0" layoutX="612.0" layoutY="170.0" stroke="#9702e7" strokeType="INSIDE" width="11.0" />
+      <Line endX="42.70709228515625" endY="-105.0072021484375" layoutX="475.0" layoutY="354.0" startX="108.0" startY="-165.71429443359375" stroke="#9702e7" />
+      <Line endX="-73.0" endY="-50.71429443359375" layoutX="202.0" layoutY="287.0" startX="-104.0" startY="-10.71429443359375" stroke="#f80505" />
+      <Line endX="-41.0" endY="-33.71429443359375" layoutX="234.0" layoutY="248.0" startX="-104.29290771484375" startY="-12.421417236328125" stroke="#f80505" />
+      <Line endX="-49.0" endY="20.28570556640625" layoutX="298.0" layoutY="224.0" startX="-104.0" startY="-10.71429443359375" stroke="#f80505" />
+      <Line endX="-35.0" endY="-4.0072021484375" layoutX="348.0" layoutY="249.0" startX="-98.29290771484375" startY="-4.0072021484375" stroke="#f80505" />
+      <Line endX="-67.70709228515625" endY="-45.71429443359375" layoutX="409.0" layoutY="249.0" startX="-98.29290771484375" startY="-4.0072021484375" stroke="#f80505" />
+      <Line endX="-25.0" endY="-4.0072021484375" layoutX="440.0" layoutY="207.0" startX="-98.29290771484375" startY="-4.0072021484375" stroke="#f80505" />
+      <Line endX="-28.0" endY="3.28570556640625" layoutX="511.0" layoutY="207.0" startX="-98.29290771484375" startY="-4.0072021484375" stroke="#f80505" />
+      <Line endX="2.0" endY="12.28570556640625" layoutX="580.0" layoutY="215.0" startX="-98.29290771484375" startY="-4.0072021484375" stroke="#f80505" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f80505" height="12.0" layoutX="612.0" layoutY="203.0" stroke="#f80505" strokeType="INSIDE" width="11.0" />
+      <Line endX="-11.0" endY="8.28570556640625" layoutX="202.0" layoutY="303.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+      <Line endX="-52.0" endY="-59.71429443359375" layoutX="296.0" layoutY="332.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+      <Line endX="-39.0" endY="-31.71429443359375" layoutX="347.0" layoutY="292.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+      <Line endX="-70.0" endY="-56.71429443359375" layoutX="413.0" layoutY="279.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+      <Line endX="-62.0" endY="-50.71429443359375" layoutX="446.0" layoutY="243.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+      <Line endX="-42.0" endY="-12.71429443359375" layoutX="488.0" layoutY="211.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+      <Line endX="-29.0" endY="12.28570556640625" layoutX="548.0" layoutY="217.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+      <Line endX="-34.0" endY="-28.71429443359375" layoutX="621.0" layoutY="248.0" startX="-104.0" startY="-19.71429443359375" stroke="#08cd2c" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#08cd2c" height="12.0" layoutX="612.0" layoutY="238.0" stroke="#08cd2c" strokeType="INSIDE" width="11.0" />
+      <Label layoutX="639.0" layoutY="166.0" prefHeight="20.0" prefWidth="68.0" text="All Sales" textFill="#0a0909">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="639.0" layoutY="198.0" prefHeight="20.0" prefWidth="117.0" text="Vegetables Sales" textFill="#0a0909">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="639.0" layoutY="234.0" prefHeight="20.0" prefWidth="89.0" text="Fruits Sales" textFill="#0a0909">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="124.0" prefHeight="20.0" prefWidth="53.0" text="Today" textFill="#3c00ff">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Text layoutX="59.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Employees">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="315.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Fruits">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="540.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Vegetables" wrappingWidth="197.9999942779541">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Label fx:id="txtFruits" layoutX="327.0" layoutY="67.0" text="10">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

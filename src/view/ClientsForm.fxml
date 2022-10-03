@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="405.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientsFormController">
+   <children>
+      <ImageView fitHeight="405.0" fitWidth="768.0" opacity="0.72" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/background.jpg" />
+         </image>
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ImageView>
+      <Label layoutX="26.0" layoutY="14.0" text="Manage Clients Details">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="13.0" layoutY="52.0" prefHeight="11.0" prefWidth="748.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8ecfd6" height="319.0" layoutX="12.0" layoutY="77.0" stroke="#9bb9d6" strokeType="INSIDE" width="255.0" />
+      <Label layoutX="22.0" layoutY="67.0" style="-fx-background-color: #ffffff;" text="Add New Client">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtClientID" focusColor="BLACK" layoutX="23.0" layoutY="103.0" onKeyReleased="#Enter_key_Releaased" prefHeight="35.0" prefWidth="230.0" style="-fx-border-color: #000000; -fx-border-radius: 30px;">
+         <padding>
+            <Insets left="10.0" top="16.0" />
+         </padding>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="39.0" layoutY="95.0" style="-fx-background-color: #8ecfd6;" text="Client ID" />
+      <JFXTextField fx:id="txtClientName" focusColor="BLACK" layoutX="24.0" layoutY="168.0" onKeyReleased="#Enter_key_Releaased" prefHeight="35.0" prefWidth="230.0" style="-fx-border-color: #000000; -fx-border-radius: 30px;">
+         <padding>
+            <Insets left="10.0" top="16.0" />
+         </padding>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="39.0" layoutY="160.0" style="-fx-background-color: #8ecfd6;" text="Client Name" />
+      <JFXTextField fx:id="txtClientAddress" focusColor="BLACK" layoutX="23.0" layoutY="229.0" onKeyReleased="#Enter_key_Releaased" prefHeight="35.0" prefWidth="230.0" style="-fx-border-color: #000000; -fx-border-radius: 30px;">
+         <padding>
+            <Insets left="10.0" top="16.0" />
+         </padding>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="41.0" layoutY="221.0" style="-fx-background-color: #8ecfd6;" text="Address" />
+      <JFXTextField fx:id="txtClientMail" focusColor="BLACK" layoutX="23.0" layoutY="294.0" onKeyReleased="#Enter_key_Releaased" prefHeight="35.0" prefWidth="230.0" style="-fx-border-color: #000000; -fx-border-radius: 30px;">
+         <padding>
+            <Insets left="10.0" top="16.0" />
+         </padding>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="38.0" layoutY="286.0" style="-fx-background-color: #8ecfd6;" text="E-Mail" />
+      <JFXButton fx:id="btnAddClient" layoutX="67.0" layoutY="349.0" onAction="#addClientOnAction" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: #09ae1a;" text="ADD New Client" textFill="#221b1b">
+         <graphic>
+            <FontAwesomeIconView glyphName="PLUS" size="15" wrappingWidth="15.0" />
+         </graphic>
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8ecfd6" height="319.0" layoutX="272.0" layoutY="77.0" stroke="#9bb9d6" strokeType="INSIDE" width="255.0" />
+      <Label layoutX="281.0" layoutY="67.0" style="-fx-background-color: #ffffff;" text="Remove/Update Client Details">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearch" layoutX="281.0" layoutY="98.0" onAction="#txtSearchOnAction" prefHeight="25.0" prefWidth="230.0" promptText="Search Name">
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </TextField>
+      <FontAwesomeIconView fill="#8d8d8d" glyphName="SEARCH" layoutX="285.0" layoutY="115.0" />
+      <JFXTextField fx:id="txtUpdateID" focusColor="BLACK" layoutX="281.0" layoutY="138.0" onAction="#txtClientOnAction" prefHeight="35.0" prefWidth="230.0" style="-fx-border-color: #000000; -fx-border-radius: 30px;">
+         <padding>
+            <Insets left="10.0" top="16.0" />
+         </padding>
+      </JFXTextField>
+      <Label layoutX="296.0" layoutY="130.0" style="-fx-background-color: #8ecfd6;" text="Client ID" />
+      <JFXTextField fx:id="txtUpdateName" focusColor="BLACK" layoutX="285.0" layoutY="195.0" prefHeight="35.0" prefWidth="230.0" style="-fx-border-color: #000000; -fx-border-radius: 30px;">
+         <padding>
+            <Insets left="10.0" top="16.0" />
+         </padding>
+      </JFXTextField>
+      <Label layoutX="296.0" layoutY="187.0" style="-fx-background-color: #8ecfd6;" text="Client Name" />
+      <JFXTextField fx:id="txtUpdateAddress" focusColor="BLACK" layoutX="285.0" layoutY="256.0" prefHeight="35.0" prefWidth="230.0" style="-fx-border-color: #000000; -fx-border-radius: 30px;">
+         <padding>
+            <Insets left="10.0" top="16.0" />
+         </padding>
+      </JFXTextField>
+      <Label layoutX="298.0" layoutY="248.0" style="-fx-background-color: #8ecfd6;" text="Address" />
+      <JFXTextField fx:id="txtUpdateMail" focusColor="BLACK" layoutX="285.0" layoutY="314.0" prefHeight="35.0" prefWidth="230.0" style="-fx-border-color: #000000; -fx-border-radius: 30px;">
+         <padding>
+            <Insets left="10.0" top="16.0" />
+         </padding>
+      </JFXTextField>
+      <Label layoutX="303.0" layoutY="306.0" style="-fx-background-color: #8ecfd6;" text="E-Mail" />
+      <JFXButton layoutX="303.0" layoutY="362.0" onAction="#updateBtnOnAction" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: #b50b0b;" text="UPDATE" textFill="#fcfcfc">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="15" wrappingWidth="15.0" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDeleteClient" layoutX="400.0" layoutY="362.0" onAction="#deleteClientBtnOnAction" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #b50b0b;" text="REMOVE" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="15" wrappingWidth="15.0" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblClient" layoutX="532.0" layoutY="77.0" prefHeight="319.0" prefWidth="230.0">
+        <columns>
+          <TableColumn fx:id="colClientID" prefWidth="75.0" text="Cl_ID" />
+            <TableColumn fx:id="colClientName" prefWidth="154.0" text="Name" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
